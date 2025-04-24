@@ -18,7 +18,7 @@ services:
       context: ./backend
       dockerfile: go.dockerfile
     environment:
-      DATABASE_URL: 'DATABASE_URL=postgresql://golang_docker_user:RBfEOInbclObLrGnnHSIvf0AfMXixIDR@dpg-d04seu15pdvs73ad1csg-a.oregon-postgres.render.com/golang_docker?sslmode=require'
+      DATABASE_URL: 'postgres://postgres:postgres@db:5432/postgres?sslmode=disable'
     ports:
       - "8000:8000"
     depends_on:
